@@ -98,34 +98,36 @@ public class JKB_Main {
         
         System.out.println("-------------Creating a monthly calendar-----------"); 
         
-        //Font specific. Works with default fonts in Eclipse, not in netBeans.
+        //Font specific. Works with default fonts in Eclipse, not in NetBeans.
         //User should input number of days and on which day of the week it starts.
         
-        int g = 1;
-		int h = 0;
-		int monthStartOnWeekday = 6;
+        int monthStartOnWeekday = 6;
+        int daysInMonth = 31;
+        int loopingNumber1 = 0;
+		int loopingNumber2 = 1;
 		String emptyDay = "    ";
 		System.out.println("Sun Mon Tue Wed Thu Fri Sat");
 			
-		while (h<(monthStartOnWeekday-1)) {
+		while (loopingNumber1<monthStartOnWeekday-1) {
 			System.out.print(emptyDay);
-			h++;
+			loopingNumber1++;
 		}
-		while ( g<=31 ){
-			if ( ((monthStartOnWeekday-1)+g) % 7 == 0){
-				System.out.println(g);
+		while ( loopingNumber2<=daysInMonth ){
+			if ( (monthStartOnWeekday-1+loopingNumber2) % 7 == 0){
+				System.out.println(loopingNumber2);
 			}
-			else if (g<10){
-				System.out.print(g+"   ");
+			else if (loopingNumber2<10){
+				System.out.print(loopingNumber2+"   ");
 			}
 			else {
-				System.out.print(g+"  ");
+				System.out.print(loopingNumber2+"  ");
 			}
-			g++;
+			loopingNumber2++;
 			}
-		
+        
         System.out.println("");
-
+        
+        
         System.out.println("---------------------Do while-------------------"); 
         
         //"Inform me of his score until he reaches 40+ points."
